@@ -1,0 +1,225 @@
+.commentlist{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    grid-gap-horizontal: 20px;
+    align-items:stretch;
+}
+
+.commentlist li{
+    list-style:none !important;
+    margin:0px !important;
+    margin-bottom:30px !important
+}
+
+.children{
+    display:none;
+}
+
+.comment_container{
+    background: #fff;
+    box-shadow: 0px 10px 40px rgba(111, 137, 163, .2);
+    padding: 35px 30px 30px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    position: relative;
+    width: 100%;
+    height:100%;
+    display:grid;
+    grid-template-rows: 60px 2fr 110px;
+}
+
+.comment_container:after{
+    content:"";
+    display: block;
+    position: absolute;
+    width: 42px;
+    height: 35px;
+    background:url(../img/comment.svg);
+    top: -20px;
+    right: 20px;
+}
+
+.profile-image img{
+    border-radius:20px;
+    position:relative !important;
+    display:block !important;
+    margin:auto;
+    float:none !important;
+    margin-bottom:10px;
+}
+
+.meta-details{
+    margin:10px 0px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.customer-name{
+    font-style:italic;
+}
+
+.comment-date{
+    color:#ccc;
+}
+
+.rating-verified{
+    margin-top:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.rating-star{
+    font-size:26px;
+}
+
+.verified-tag{
+    padding:5px 10px;
+    background:#ccc;
+    border-radius:10px;
+    font-size:16px;
+    display:flex;
+    align-items:center;
+}
+
+.verified-tag img{
+    width:15px;
+    margin-right:10px;
+}
+
+.comment-description{
+    justify-self:center;
+    align-self:center;
+}
+
+@media(max-width:968px){
+    .commentlist{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width:768px){
+    .commentlist{
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+.pi-review-loading{
+    position: relative;
+}
+
+.pi-review-loading:after{
+    content:"";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.5) url(../img/loader.svg) center center;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    top:0;
+    left:0;
+}
+
+.pisol-review-rating-count-container{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    width:200px;
+    height:200px;
+    background-color:#cccccc3d;
+    border-radius:20px;
+    box-sizing: border-box;
+}
+
+.pi-average-rating{
+    font-size:60px;
+    line-height: 60px;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.pisol-review-rating-count-container .woocommerce-review-rating{
+   margin-left:auto;
+   margin-right:auto;
+   margin-bottom:10px;
+}
+
+.pi-review-count{
+    text-align:center;
+}
+
+.pi-review-stats-container{
+    display:flex;
+    align-items:stretch;
+    justify-content:stretch;
+    margin-bottom:40px;
+}
+
+.pisol-review-stats-container{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    margin-left:20px;
+    background:#cccccc3d;
+    padding:20px;
+    border-radius:20px;
+    box-sizing: border-box;
+}
+
+.pisol-rating-percentage-container{
+    display:flex;
+    align-items:center;
+    font-size:16px;
+}
+
+.pisol-rating-percentage-bar{
+    width:400px;
+    height:20px;
+    background-color:#ccc;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+.pisol-rating-percentage-bar-fill{
+    background-color:orange;
+    height:100%;
+}
+
+.rating-for, .pisol-rating-percentage{
+    width:40px
+}
+
+.pisol-review-custom-parameters{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    margin-left:20px;
+    background:#cccccc3d;
+    padding:20px;
+    border-radius:20px;
+    box-sizing: border-box;
+}
+
+.pisol-review-custom-parameter{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:10px;
+    align-items:center;
+}
+
+@media(max-width:765px){
+    .pi-review-stats-container{
+        display:block;
+    }
+
+    .pisol-review-rating-count-container, .pisol-review-custom-parameters, .pisol-review-stats-container{
+        width:100%;
+        margin-left:0px;
+        margin-bottom:20px;
+        box-sizing: border-box;
+    }
+}
